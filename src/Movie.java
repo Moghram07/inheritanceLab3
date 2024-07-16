@@ -17,7 +17,7 @@ public class Movie extends Media{
     }
 
     public void watch(User user){
-        user.purchased(this);
+        System.out.println("Watching movie: "+ getTitle());
     }
 
     public void recommendSimilarMovies(List<Movie> movieCatalog){
