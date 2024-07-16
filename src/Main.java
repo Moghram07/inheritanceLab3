@@ -76,6 +76,15 @@ public class Main {
         } else {
             System.out.println("\nBook not found.");
         }
+        // Creating a list of all movies in the store for recommendation
+        List<Movie> movieCatalog = new ArrayList<>();
+        movieCatalog.add(movie1);
+        movieCatalog.add(movie2);
+        movieCatalog.add(movie3);
+        movieCatalog.add(movie4);
 
+        // Recommend similar movies based on director for movie2
+        System.out.println("\nRecommendations for '" + movie2.getTitle() + "':");
+        movie2.recommendSimilarMovies(movieCatalog);
     }
 }
