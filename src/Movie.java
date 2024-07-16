@@ -21,7 +21,13 @@ public class Movie extends Media{
     }
 
     public void recommendSimilarMovies(List<Movie> movieCatalog){
-
+        String director = getAuteur();
+        System.out.println("Movies from the director "+ director + " : ");
+        for(Movie movie : movieCatalog){
+            if(movie.getAuteur().equals(director)){
+                System.out.println("- "+ movie.getTitle());
+            }
+        }
     }
 
     @Override
