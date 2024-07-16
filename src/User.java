@@ -69,8 +69,8 @@ public class User {
             } else if (media instanceof Music) {
                 ((Music) media).listen(this);
             }
+            purchased.add(media);
         }
-        purchased.addAll(shoppingCart);
         shoppingCart.clear();
     }
 
